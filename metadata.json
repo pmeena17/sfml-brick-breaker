@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Project Feasibility Analyzer",
+  "description": "A futuristic UI that analyzes a user's project description using the Gemini API and provides a detailed feasibility report, including a viability score, tech stack recommendations, potential challenges, and a development roadmap.",
+  "requestFramePermissions": []
+}

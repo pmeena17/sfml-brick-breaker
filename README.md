@@ -1,6 +1,6 @@
 # Brick Breaker (C++20 rewrite)
 
-A ground-up rewrite of a 2014 college-freshman C/C++ project (a 5-level brick breaker built on the `simplecpp`
+A ground-up rewrite of a C/C++ project (a 5-level brick breaker built on the `simplecpp`
 teaching graphics library and Windows `conio`). Same game, same five levels, same three power-ups, but structured
 like a code base you could keep adding to: data-driven levels, a pure game-logic library with unit tests, and a
 thin SFML 3 front-end (free, zlib-licensed, runs on Windows, Linux and macOS).

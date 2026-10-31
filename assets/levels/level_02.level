@@ -1,0 +1,49 @@
+# Brick Breaker level file.
+#
+# Coordinates are logical pixels in the 600x600 window; x/y are the CENTRE of a brick.
+# The playfield is x:10..590, y:10..590.  See README.md ("Adding a level") for the full format.
+#
+#   name <text>                       level name shown in the menu (required)
+#   brick_size <w> <h>                default brick size for bricks that do not give their own
+#   brick <x> <y> [w=N] [h=N] [hp=N] [power=ID]
+#                                     hp    = hits needed to destroy it (default 1)
+#                                     power = slow_ball | fast_ball | shrink_paddle (dropped when destroyed)
+
+# Two blocks of bricks with a gap in the middle for the ball to slip through.
+name Level 2
+brick_size 70 30
+
+# row 1
+brick 90 75
+brick 175 75
+brick 260 75
+brick 450 75
+brick 535 75
+
+# row 2
+brick 90 115
+brick 175 115 power=slow_ball
+brick 260 115
+brick 450 115
+brick 535 115
+
+# row 3 (durable: hp=2)
+brick 90 155 hp=2
+brick 175 155 hp=2
+brick 260 155 hp=2
+brick 450 155 hp=2
+brick 535 155 hp=2
+
+# row 4
+brick 90 225 power=fast_ball
+brick 175 225 power=shrink_paddle
+brick 260 225
+brick 450 225
+brick 535 225
+
+# row 5
+brick 90 265
+brick 175 265
+brick 260 265
+brick 450 265
+brick 535 265

@@ -1,0 +1,26 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": { "major": 3, "minor": 28, "patch": 0 },
+    "configurePresets": [
+        {
+            "name": "default",
+            "displayName": "Game + tests (Release)",
+            "binaryDir": "${sourceDir}/build/default",
+            "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
+        },
+        {
+            "name": "tests-only",
+            "displayName": "Tests only, no SFML needed (Debug + sanitizers on GCC/Clang)",
+            "binaryDir": "${sourceDir}/build/tests-only",
+            "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug", "BB_BUILD_GAME": "OFF", "BB_ENABLE_SANITIZERS": "ON" }
+        }
+    ],
+    "buildPresets": [
+        { "name": "default", "configurePreset": "default", "configuration": "Release" },
+        { "name": "tests-only", "configurePreset": "tests-only", "configuration": "Debug" }
+    ],
+    "testPresets": [
+        { "name": "default", "configurePreset": "default", "configuration": "Release", "output": { "outputOnFailure": true } },
+        { "name": "tests-only", "configurePreset": "tests-only", "configuration": "Debug", "output": { "outputOnFailure": true } }
+    ]
+}

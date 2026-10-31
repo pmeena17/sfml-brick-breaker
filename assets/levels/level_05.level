@@ -1,0 +1,49 @@
+# Brick Breaker level file.
+#
+# Coordinates are logical pixels in the 600x600 window; x/y are the CENTRE of a brick.
+# The playfield is x:10..590, y:10..590.  See README.md ("Adding a level") for the full format.
+#
+#   name <text>                       level name shown in the menu (required)
+#   brick_size <w> <h>                default brick size for bricks that do not give their own
+#   brick <x> <y> [w=N] [h=N] [hp=N] [power=ID]
+#                                     hp    = hits needed to destroy it (default 1)
+#                                     power = slow_ball | fast_ball | shrink_paddle (dropped when destroyed)
+
+# Bricks on a 55px grid forming a diagonal maze.
+name Level 5
+brick_size 40 30
+
+# row 1
+brick 65 275
+brick 120 275
+brick 175 275
+brick 285 275
+brick 395 275
+
+# row 2
+brick 450 275
+brick 505 275 power=slow_ball
+brick 120 220
+brick 175 165
+brick 230 110
+
+# row 3 (durable: hp=2)
+brick 285 55 hp=2
+brick 285 110 hp=2
+brick 285 165 hp=2
+brick 340 110 hp=2
+brick 395 165 hp=2
+
+# row 4
+brick 450 220 power=fast_ball
+brick 120 330 power=shrink_paddle
+brick 175 385
+brick 230 440
+brick 285 495
+
+# row 5
+brick 285 440
+brick 285 385
+brick 340 440
+brick 395 385
+brick 450 330
